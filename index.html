@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samira Sabry | AI Automation & Machine Learning Portfolio</title>
+<style>
+:root{--ink:#17152f;--muted:#666780;--purple:#8652f6;--purple2:#b79aff;--line:#e8e5f5;--panel:rgba(255,255,255,.88)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{font-family:Inter,"Segoe UI",Arial,sans-serif;color:var(--ink);line-height:1.6;background:linear-gradient(135deg,#f7f5ff 0%,#fff 48%,#f0edff 100%);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(226,220,248,.8)}
+.nav{max-width:1240px;margin:auto;padding:15px 28px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.logo{font-weight:850;font-size:21px;letter-spacing:-.6px;white-space:nowrap}.logo span{color:var(--purple)}
+.links{display:flex;gap:25px;font-size:14px;font-weight:650;color:#3f3c5b}.links a{transition:color .2s}.links a:hover{color:var(--purple)}
+section{max-width:1240px;margin:auto;padding:66px 28px}
+.hero{max-width:none;min-height:570px;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 80% 45%,rgba(183,154,255,.35),transparent 32%),radial-gradient(ellipse at 10% 75%,rgba(135,82,246,.12),transparent 27%),linear-gradient(110deg,#fbfaff,#f1edff 70%,#e8ddff);padding:76px 24px 62px}
+.hero:before{content:"";position:absolute;width:390px;height:390px;border-radius:50%;right:-100px;top:-145px;border:1px solid rgba(135,82,246,.15);box-shadow:0 0 0 35px rgba(135,82,246,.035),0 0 0 75px rgba(135,82,246,.025)}
+.hero:after{content:"";position:absolute;width:300px;height:200px;left:-100px;bottom:-110px;border-radius:50%;background:#d9caff;filter:blur(45px);opacity:.7}
+.hero>div{position:relative;z-index:2;width:min(900px,100%);display:flex;flex-direction:column;align-items:center}
+.eyebrow{color:var(--purple);font-weight:800;letter-spacing:3px;text-transform:uppercase;font-size:13px}
+h1{font-size:clamp(48px,8vw,90px);line-height:1.03;letter-spacing:-3px;margin:13px 0 8px;font-weight:850}
+h1 span{color:var(--purple)}
+.hero h2{font-size:clamp(25px,3.5vw,39px);line-height:1.2;margin:10px 0 16px;letter-spacing:-1px}
+.hero h2 span{color:var(--purple)}
+.hero p{max-width:690px;color:#555570;font-size:17px}
+.btns{display:flex;gap:13px;margin-top:25px;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border-radius:999px;border:1px solid #d9cffb;background:rgba(255,255,255,.76);font-weight:750;font-size:14px;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(88,57,160,.13)}
+.primary{background:linear-gradient(120deg,#9d75ff,#7843ef);color:white;border-color:transparent;box-shadow:0 8px 22px rgba(134,82,246,.2)}
+h2{font-size:clamp(29px,4vw,39px);line-height:1.2;margin-bottom:22px;letter-spacing:-.9px}
+.muted{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:23px;box-shadow:0 7px 24px rgba(56,40,110,.045);transition:transform .22s,border-color .22s,box-shadow .22s}
+.card:hover{transform:translateY(-4px);border-color:#c9b7ff;box-shadow:0 16px 35px rgba(76,50,140,.1)}
+.card h3{font-size:17px;margin-bottom:8px;letter-spacing:-.25px}
+.card p,.card li{color:#62627d;font-size:14px}
+.tags,.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}
+.tag,.badge{padding:7px 11px;border-radius:999px;background:#f2edff;color:#6740bd;font-size:12px;font-weight:700;border:1px solid #e7ddff}
+.badges{justify-content:center;margin-top:27px}
+.badge{background:rgba(255,255,255,.8);color:#4e4a68;border-color:#e8e1fa;padding:8px 13px}
+.section-label{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:var(--purple);margin-bottom:8px;font-weight:850}
+.timeline{border-left:2px solid #d9ccff;padding-left:24px;margin-left:8px}
+.item{margin-bottom:30px;position:relative}.item:before{content:"";position:absolute;left:-31px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--purple);box-shadow:0 0 0 5px #eee7ff}
+.date{font-size:12px;color:var(--purple);font-weight:800;letter-spacing:.8px}
+ul{padding-left:20px;margin-top:10px}
+.project-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.project-icon{width:43px;height:43px;flex:0 0 43px;border-radius:14px;background:linear-gradient(145deg,#f0e8ff,#ded0ff);display:grid;place-items:center;color:#7044d0;font-weight:850;font-size:13px}
+.metric{font-size:31px;font-weight:850;margin-top:8px;color:#7747dc}
+.cta{margin-top:20px;display:inline-block;color:#7747dc;font-weight:750}
+#about .card{display:grid;grid-template-columns:1.3fr 1fr;align-items:center;gap:26px}
+#about .traits{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.trait{padding:16px 10px;text-align:center;border:1px solid #e7dfff;background:#faf8ff;border-radius:14px;font-size:13px;font-weight:750}
+.trait b{display:block;font-size:22px;color:var(--purple);margin-bottom:4px}
+#projects .grid .card{min-height:225px}
+#contact .contact-panel{background:linear-gradient(115deg,#201b43,#43306e 65%,#7654b7);color:white;border:0;padding:35px}
+#contact .contact-panel p{color:#e0d9f6}
+#contact .contact-panel .btn:not(.primary){color:#211a3e}
+#contact .btns{justify-content:flex-start}
+.contact{text-align:left}
+footer{text-align:center;padding:25px;color:#7e7897;border-top:1px solid #e8e2f7;font-size:13px}
+@media(max-width:900px){.links{gap:13px;font-size:12px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}#about .card{grid-template-columns:1fr}}
+@media(max-width:620px){.nav{padding:13px 17px}.links{display:none}section{padding:50px 17px}.hero{min-height:550px;padding:60px 18px}.grid{grid-template-columns:1fr}h1{letter-spacing:-1.8px}.hero p{font-size:15px}.card{padding:20px}#about .traits{grid-template-columns:repeat(2,1fr)}#contact .contact-panel .btns{justify-content:center}}
+</style>
+</head>
+<body>
+<nav><div class="nav"><div class="logo">Samira Sabry<span>.</span></div><div class="links">
+<a href="#about">About</a><a href="#skills">Skills</a><a href="#services">What I Offer</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a>
+</div></div></nav>
+
+<section class="hero">
+<div>
+<div class="eyebrow">⚡ AI AUTOMATION ENGINEER</div>
+<h1 style="font-size:clamp(42px,7vw,76px);margin-bottom:14px">Samira Sabry</h1>
+<h2 style="font-size:clamp(28px,4vw,46px);margin:0 0 20px">Turning repetitive work<br><span>into smart workflows.</span></h2>
+<p>I build practical automation systems with n8n, APIs, Webhooks, and business integrations — connecting tools, processing data, and automating everyday operations.</p>
+<div class="btns"><a class="btn primary" href="#projects">View My Work →</a><a class="btn" href="#contact">Work With Me</a></div>
+<div class="badges"><span class="badge">✳ n8n</span><span class="badge">⚙ APIs</span><span class="badge">⌘ Webhooks</span><span class="badge">▦ Google Sheets</span><span class="badge">➤ Telegram</span><span class="badge">✉ Gmail</span><span class="badge">＋ and more</span></div>
+</div>
+</section>
+
+<section id="about">
+<h2>About Me</h2>
+<div class="card">
+<div><p>I’m Samira Sabry, a Computer Science student focused on AI automation and machine learning. I enjoy building practical workflows that connect apps, reduce repetitive work, and make everyday processes easier.</p><p style="margin-top:13px">I work with n8n, APIs, Webhooks, Python, and data tools to turn ideas into clear, useful solutions.</p></div>
+<div class="traits"><div class="trait"><b>✦</b>Problem Solver</div><div class="trait"><b>⚙</b>Automation Focused</div><div class="trait"><b>◎</b>Detail Oriented</div><div class="trait"><b>↗</b>Reliable Delivery</div></div>
+</div>
+</section>
+
+<section id="skills">
+<div class="section-label">What I Work With</div><h2>Skills</h2>
+<div class="grid">
+<div class="card"><h3>Programming</h3><div class="tags"><span class="tag">Python</span><span class="tag">C++</span></div></div>
+<div class="card"><h3>AI & Machine Learning</h3><div class="tags"><span class="tag">Machine Learning</span><span class="tag">Scikit-learn</span><span class="tag">Pandas</span><span class="tag">NumPy</span></div></div>
+<div class="card"><h3>AI Automation</h3><div class="tags"><span class="tag">n8n</span><span class="tag">APIs</span><span class="tag">AI Automation</span></div></div>
+<div class="card"><h3>Systems & Tools</h3><div class="tags"><span class="tag">Linux</span><span class="tag">Git</span><span class="tag">GitHub</span></div></div>
+</div>
+</section>
+
+<section id="services"><div class="section-label">Services</div><h2>What I Offer</h2><p class="muted" style="max-width:760px;margin:-12px 0 26px">I help individuals and small businesses automate repetitive tasks, connect their tools, and turn ideas into practical AI and data solutions.</p><div class="grid"><div class="card"><h3>Machine Learning Solutions</h3><p class="muted">Data preprocessing, feature engineering, model training and evaluation using Python and Scikit-learn.</p><div class="tags"><span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Pandas</span><span class="tag">NumPy</span></div></div><div class="card"><h3>Workflow Automation with n8n</h3><p class="muted">Designing workflows to automate repetitive steps, move data between connected apps, and trigger notifications based on defined conditions.</p><div class="tags"><span class="tag">n8n</span><span class="tag">APIs</span><span class="tag">Automation</span></div></div><div class="card"><h3>AI & ML Prototypes</h3><p class="muted">Building and testing proof-of-concept solutions using machine-learning models and simple interfaces for demonstration.</p><div class="tags"><span class="tag">Streamlit</span><span class="tag">Machine Learning</span></div></div><div class="card"><h3>Data Preparation with Python</h3><p class="muted">Cleaning, transforming, and preparing datasets for analysis and machine-learning workflows.</p><div class="tags"><span class="tag">Python</span><span class="tag">Data</span><span class="tag">Feature Engineering</span></div></div></div></section>
+
+<section id="experience">
+<div class="section-label">Hands-on Background</div><h2>Experience & Training</h2>
+<div class="timeline">
+<div class="item"><div class="date">AUG 2026 — PRESENT</div><h3>AI Automation Trainee · Digital Egypt Pioneers Initiative (DEPI)</h3><p class="muted">Cairo, Egypt</p><ul><li>Developing practical skills in AI automation, n8n workflow automation, API integration, and AI-powered automation solutions.</li><li>Working on hands-on projects combining AI tools, automation workflows, and APIs.</li></ul></div>
+<div class="item"><div class="date">JUL 2026 — AUG 2026</div><h3>AI & Machine Learning Trainee · National Telecommunication Institute</h3><p class="muted">Cairo, Egypt</p><ul><li>Built and evaluated machine-learning models using Python, Scikit-learn, Pandas, and NumPy.</li><li>Applied supervised and unsupervised learning with practical preprocessing and feature engineering.</li></ul></div>
+<div class="item"><div class="date">AUG 2025 — SEP 2025</div><h3>Summer Linux System Administration Trainee · National Telecommunication Institute</h3><p class="muted">Cairo, Egypt</p><ul><li>Worked with Linux administration, users and permissions, process control, monitoring, networking, and shell scripting.</li><li>Practiced configuring, maintaining, and troubleshooting Linux servers.</li></ul></div>
+<div class="item"><div class="date">SEP 2025</div><h3>Cybersecurity Member · Google Developer Group — BNU</h3><ul><li>Participated in cybersecurity activities, events, collaborative learning, and professional networking.</li></ul></div>
+</div>
+</section>
+
+<section id="projects">
+<div class="section-label">Selected Work</div><h2>Projects</h2>
+<div class="grid">
+<div class="card"><div class="project-top"><div><h3>Predictive Maintenance Using XGBoost</h3><p class="muted">Machine Failure Prediction · Jul 2026</p></div><div class="project-icon">AI</div></div><p style="margin-top:10px">Developed a machine-learning model to predict industrial machine failure from sensor data, with preprocessing, class-imbalance handling, and model evaluation.</p><div class="tags"><span class="tag">Python</span><span class="tag">XGBoost</span><span class="tag">SMOTE</span><span class="tag">Streamlit</span></div></div>
+<div class="card"><div class="project-top"><div><h3>Lead Qualification Automation</h3><p class="muted">n8n Workflow · Lead Management</p></div><div class="project-icon">n8n</div></div><p style="margin-top:10px">Created an automation flow that evaluates incoming leads against budget-based criteria and helps organize or qualify leads using predefined conditions.</p><div class="tags"><span class="tag">n8n</span><span class="tag">Conditional Logic</span><span class="tag">Lead Qualification</span></div></div>
+<div class="card"><div class="project-top"><div><h3>Automated Weather Notifications</h3><p class="muted">Scheduled Workflow · Weather Updates</p></div><div class="project-icon">API</div></div><p style="margin-top:10px">Built a scheduled workflow that retrieves weather information from the Open-Meteo API and sends automatic updates through Telegram and Gmail.</p><div class="tags"><span class="tag">n8n</span><span class="tag">Open-Meteo API</span><span class="tag">Telegram</span><span class="tag">Gmail</span></div></div>
+<div class="card"><div class="project-top"><div><h3>E-commerce Order Automation</h3><p class="muted">Webhook · Customer Notifications</p></div><div class="project-icon">API</div></div><p style="margin-top:10px">Built a webhook-based workflow to receive customer or order details, notify an administrator through Telegram, and send a confirmation email to the customer through Gmail.</p><div class="tags"><span class="tag">n8n</span><span class="tag">Webhook</span><span class="tag">Telegram</span><span class="tag">Gmail</span></div></div>
+<div class="card"><div class="project-top"><div><h3>AI Customer Support Assistant</h3><p class="muted">AI Workflow · Message Processing</p></div><div class="project-icon">AI</div></div><p style="margin-top:10px">Designed an n8n workflow concept to receive customer messages, prepare input for AI analysis, classify intent and priority, draft a response, and flag cases that need human support.</p><div class="tags"><span class="tag">n8n</span><span class="tag">AI</span><span class="tag">Webhook</span><span class="tag">Intent Classification</span></div></div>
+<div class="card"><div class="project-top"><div><h3>RSS Job Alerts Automation</h3><p class="muted">RSS Feed · Job Notifications</p></div><div class="project-icon">RSS</div></div><p style="margin-top:10px">Automates collecting job posts from RSS feeds, organizing job details and links, and preparing updates to send through a messaging channel.</p><div class="tags"><span class="tag">n8n</span><span class="tag">RSS</span><span class="tag">Data Formatting</span><span class="tag">Telegram</span></div></div>
+<div class="card"><div class="project-top"><div><h3>Customer Data Validation</h3><p class="muted">Webhook · Google Sheets</p></div><div class="project-icon">DB</div></div><p style="margin-top:10px">Workflow design for validating customer fields, checking duplicate records using agreed identifiers, and appending eligible new records to Google Sheets. Listed as a workflow design/proposal, not a confirmed deployed project.</p><div class="tags"><span class="tag">n8n</span><span class="tag">Webhook</span><span class="tag">Google Sheets</span><span class="tag">Validation</span></div></div>
+</div>
+</section>
+
+<section>
+<div class="grid">
+<div class="card"><div class="section-label">Model Result</div><div class="metric">98.5%</div><p class="muted">Accuracy achieved in the Predictive Maintenance project.</p></div>
+<div class="card"><div class="section-label">Development Focus</div><div class="metric">AI + Automation</div><p class="muted">Combining machine learning, APIs, and workflow automation to build practical solutions.</p></div>
+</div>
+</section>
+
+<section id="education">
+<div class="section-label">Academic Background</div><h2>Education & Courses</h2>
+<div class="grid">
+<div class="card"><h3>Benha National University</h3><p class="muted">Faculty of Computer Science · Obour, Egypt</p><p style="margin-top:8px">Bachelor’s in Computer Science · Expected Jun 2028</p><p style="margin-top:10px">Relevant coursework: Problem Solving, Advanced OOP, Advanced Data Structures and Algorithms, Operating Systems, Computer Organization and Architecture, Database, Networks.</p></div>
+<div class="card"><h3>Coach Academy</h3><p class="muted">C++</p><p style="margin-top:8px">Completed 5 levels in C++.</p><h3 style="margin-top:24px">Languages</h3><p>Arabic — Native<br>English — B2</p></div>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<h2>Let’s Connect</h2>
+<div class="card contact-panel">
+<div class="section-label" style="color:#c8adff">LET’S BUILD SOMETHING EFFICIENT</div><h3 style="font-size:27px;margin-bottom:8px">Ready to Automate Your Business?</h3><p>Interested in AI, Machine Learning, automation, and practical technology solutions? Let’s turn your ideas into smart workflows.</p>
+<div class="btns" style="justify-content:center"><a class="btn primary" href="mailto:Samirasabry42@gmail.com">Email Me</a><a class="btn" href="https://www.linkedin.com/in/samira-sabry-292920317" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://github.com/samirasabry42-jpg" target="_blank" rel="noopener">GitHub</a></div>
+<p style="margin-top:18px;color:#8e99b3">Cairo, Egypt · +20 122 357 9712</p>
+</div>
+</section>
+
+<footer>© 2026 Samira Sabry · AI Automation & Machine Learning Portfolio</footer>
+</body>
+</html>
